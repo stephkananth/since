@@ -3,8 +3,8 @@ osx_image: xcode11.3
 language: swift
 xcode_project: Streaks.xcodeproj
 xcode_scheme: Streaks
-xcode_destination: platform=iOS Simulator, id=7AC6E698-B459-437D-AEBC-7CAB855F3008
+xcode_destination: platform=iOS Simulator, OS=11.4, name=iPhone 8
 
 
 script:
-  - xcodebuild -scheme Streaks -sdk iphonesimulator -destination 'platform=iOS Simulator,id=7AC6E698-B459-437D-AEBC-7CAB855F3008' build test
+  - xcodebuild -scheme Streaks -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.4' build test
