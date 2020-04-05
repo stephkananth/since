@@ -16,14 +16,16 @@ struct ContentView: View {
     ZStack {
       NavigationView {
         List(self.viewModel.streaks.sorted()) { streak in
-          StreakRow(streak: streak)
-        }
-        .navigationBarTitle("days since")
-        .navigationBarItems(trailing:
-          NavigationLink(destination: AddStreakRow(viewModel: self.viewModel)) {
-            Text("+")
-              .font(.largeTitle)
+          NavigationLink(destination: ShowStreak(streak: streak)) {
+            StreakRow(streak: streak)
           }
+        }
+          .navigationBarTitle("days since")
+          .navigationBarItems(trailing:
+            NavigationLink(destination: AddStreakRow(viewModel: self.viewModel)) {
+              Text("+")
+                .font(.largeTitle)
+            }
         )
       }.onAppear(perform: {
         self.viewModel.fetchStreaks()

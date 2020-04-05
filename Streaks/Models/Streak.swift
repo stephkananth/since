@@ -19,7 +19,14 @@ class Streak: NSObject, Identifiable, Comparable {
     self.start = date
     super.init()
   }
-  
+
+  func date() -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    dateFormatter.timeStyle = .none
+    return dateFormatter.string(from: start)
+  }
+
   func reset(_ date: Date = Date()) {
     self.start = date
   }

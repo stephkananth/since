@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		858A63E5243A6624001BDA92 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A63E4243A6624001BDA92 /* Streak.swift */; };
 		858A63E8243A6DD4001BDA92 /* StreaksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF784B242D36DF00671253 /* StreaksTests.swift */; };
+		85A58DA6243A9C1F00417583 /* ShowStreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58DA5243A9C1F00417583 /* ShowStreak.swift */; };
 		85B2AF75243A757800340DC8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B2AF74243A757800340DC8 /* ViewModel.swift */; };
 		85B2AF77243A76A500340DC8 /* StreakRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B2AF76243A76A500340DC8 /* StreakRow.swift */; };
 		85BF7832242D36DA00671253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF7831242D36DA00671253 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		858A63E4243A6624001BDA92 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
+		85A58DA5243A9C1F00417583 /* ShowStreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStreak.swift; sourceTree = "<group>"; };
 		85B2AF74243A757800340DC8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		85B2AF76243A76A500340DC8 /* StreakRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakRow.swift; sourceTree = "<group>"; };
 		85BF782E242D36DA00671253 /* since.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = since.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				85BF7838242D36DA00671253 /* ContentView.swift */,
 				85B2AF76243A76A500340DC8 /* StreakRow.swift */,
 				85EE0C19243A824D006135F3 /* AddStreakRow.swift */,
+				85A58DA5243A9C1F00417583 /* ShowStreak.swift */,
 				85BF783F242D36DF00671253 /* LaunchScreen.storyboard */,
 				85BF783A242D36DF00671253 /* Assets.xcassets */,
 			);
@@ -259,6 +262,7 @@
 				85BF7837242D36DA00671253 /* Streaks.xcdatamodeld in Sources */,
 				85BF7832242D36DA00671253 /* AppDelegate.swift in Sources */,
 				85B2AF77243A76A500340DC8 /* StreakRow.swift in Sources */,
+				85A58DA6243A9C1F00417583 /* ShowStreak.swift in Sources */,
 				85BF7839242D36DA00671253 /* ContentView.swift in Sources */,
 				85BF7834242D36DA00671253 /* SceneDelegate.swift in Sources */,
 				85B2AF75243A757800340DC8 /* ViewModel.swift in Sources */,

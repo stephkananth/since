@@ -14,7 +14,7 @@ struct StreakRow: View {
   
   var body: some View {
     HStack {
-      Text(self.streak.name.lowercased())
+      Text(self.streak.name)
         .padding(.leading)
       Spacer()
       Text("\(self.streak.length()) days")
