@@ -39,7 +39,11 @@ class Streak: NSObject, Identifiable, Comparable {
   
   static func < (lhs: Streak, rhs: Streak) -> Bool {
     if lhs.start == rhs.start {
-      return lhs.name < rhs.name
+      if lhs.name == rhs.name {
+        return lhs.id < rhs.id
+      } else {
+        return lhs.name < rhs.name
+      }
     } else {
       return lhs.start < rhs.start
     }
