@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85573829243AA86F004F51AF /* StreaksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF784B242D36DF00671253 /* StreaksTests.swift */; platformFilter = ios; };
 		858A63E5243A6624001BDA92 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A63E4243A6624001BDA92 /* Streak.swift */; };
-		858A63E8243A6DD4001BDA92 /* StreaksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF784B242D36DF00671253 /* StreaksTests.swift */; };
 		85A58DA6243A9C1F00417583 /* ShowStreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58DA5243A9C1F00417583 /* ShowStreak.swift */; };
 		85B2AF75243A757800340DC8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B2AF74243A757800340DC8 /* ViewModel.swift */; };
 		85B2AF77243A76A500340DC8 /* StreakRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B2AF76243A76A500340DC8 /* StreakRow.swift */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		85BF7848242D36DF00671253 /* PBXContainerItemProxy */ = {
+		85573826243AA7BA004F51AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85BF7826242D36DA00671253 /* Project object */;
 			proxyType = 1;
@@ -47,7 +47,7 @@
 		85BF7840242D36DF00671253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85BF7842242D36DF00671253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85BF7847242D36DF00671253 /* StreaksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreaksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85BF784B242D36DF00671253 /* StreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksTests.swift; sourceTree = "<group>"; };
+		85BF784B242D36DF00671253 /* StreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StreaksTests.swift; path = StreaksTests/StreaksTests.swift; sourceTree = SOURCE_ROOT; };
 		85BF784D242D36DF00671253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85EE0C19243A824D006135F3 /* AddStreakRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreakRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,7 +188,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				85BF7849242D36DF00671253 /* PBXTargetDependency */,
+				85573827243AA7BA004F51AF /* PBXTargetDependency */,
 			);
 			name = StreaksTests;
 			productName = StreaksTests;
@@ -274,17 +274,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858A63E8243A6DD4001BDA92 /* StreaksTests.swift in Sources */,
+				85573829243AA86F004F51AF /* StreaksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85BF7849242D36DF00671253 /* PBXTargetDependency */ = {
+		85573827243AA7BA004F51AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 85BF782D242D36DA00671253 /* Streaks */;
-			targetProxy = 85BF7848242D36DF00671253 /* PBXContainerItemProxy */;
+			targetProxy = 85573826243AA7BA004F51AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -474,7 +475,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Streaks.app/Streaks";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/since.app/since";
 			};
 			name = Debug;
 		};
@@ -496,7 +497,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Streaks.app/Streaks";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/since.app/since";
 			};
 			name = Release;
 		};

@@ -33,4 +33,11 @@ class StreaksTests: XCTestCase {
     let streak: Streak = Streak(name: name)
     XCTAssertEqual(streak.length(), 0)
   }
+
+  func testDate() {
+    let name: String = "Test"
+    let date: Date = Date(timeIntervalSince1970: 0)
+    let streak: Streak = Streak(name: name, date: date)
+    XCTAssertEqual(streak.date(), "January 1, 1970")
+  }
 }
