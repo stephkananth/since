@@ -25,6 +25,6 @@ struct StreakRow: View {
 
 struct StreakRow_Previews: PreviewProvider {
   static var previews: some View {
-    StreakRow(streak: Streak(name: "Example"))
+    StreakRow(streak: Streak(name: "Example", date: Date()))
   }
 }

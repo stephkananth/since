@@ -14,10 +14,30 @@ class Streak: NSObject, Identifiable, Comparable {
   var name: String
   var start: Date
   
-  init(name: String, date: Date = Date()) {
+  init(name: String, date: Date) {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .long
+    dateFormatter.timeStyle = .none
+    print("1")
+    print(dateFormatter.string(from: date))
+    let calendar = Calendar.current
+    self.start = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: date, matchingPolicy: .previousTimePreservingSmallerComponents, repeatedTimePolicy: .first, direction: .backward) ?? date
+    print("\n2")
+    print(dateFormatter.string(from: self.start))
     self.name = name
-    self.start = date
     super.init()
+  }
+
+  func update(name: String? = nil, date: Date? = nil) {
+    if let name_temp = name {
+      if name_temp != "" {
+        self.name = name_temp
+      }
+    }
+    if let date_temp = date {
+      let calendar = Calendar.current
+      self.start = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: date_temp, matchingPolicy: .previousTimePreservingSmallerComponents, repeatedTimePolicy: .first, direction: .backward) ?? date_temp
+    }
   }
 
   func date() -> String {
@@ -28,7 +48,8 @@ class Streak: NSObject, Identifiable, Comparable {
   }
 
   func reset(_ date: Date = Date()) {
-    self.start = date
+    let calendar = Calendar(identifier: .gregorian)
+    self.start = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: date, matchingPolicy: .previousTimePreservingSmallerComponents, repeatedTimePolicy: .first, direction: .backward) ?? date
   }
   
   func length() -> Int {

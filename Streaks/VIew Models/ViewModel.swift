@@ -13,6 +13,36 @@ import UIKit
 class ViewModel: ObservableObject {
   
   @Published var streaks = [Streak]()
+
+  init() {
+    let calendar = Calendar.current
+    var dateComponents = DateComponents()
+    dateComponents.timeZone = .current
+    dateComponents.hour = 0
+    dateComponents.minute = 0
+    dateComponents.second = 0
+    dateComponents.nanosecond = 0
+    dateComponents.year = 2020
+    dateComponents.month = 2
+    dateComponents.day = 4
+    if let date1 = calendar.date(from: dateComponents) {
+      let streak1 = Streak(name: "I got my eyebrows done", date: date1)
+      streaks.append(streak1)
+    }
+    dateComponents.month = 3
+    dateComponents.day = 18
+    if let date2 = calendar.date(from: dateComponents) {
+      let streak2 = Streak(name: "I came home", date: date2)
+      streaks.append(streak2)
+    }
+    dateComponents.month = 4
+    dateComponents.day = 3
+    if let date3 = calendar.date(from: dateComponents) {
+      let streak3 = Streak(name: "I last cried", date: date3)
+      streaks.append(streak3)
+    }
+
+  }
   
   func fetchStreaks() {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate

@@ -19,6 +19,7 @@
 		85BF783B242D36DF00671253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BF783A242D36DF00671253 /* Assets.xcassets */; };
 		85BF783E242D36DF00671253 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BF783D242D36DF00671253 /* Preview Assets.xcassets */; };
 		85BF7841242D36DF00671253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BF783F242D36DF00671253 /* LaunchScreen.storyboard */; };
+		85D011AF243BB4AD0009BA86 /* EditStreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D011AE243BB4AD0009BA86 /* EditStreak.swift */; };
 		85EE0C1A243A824D006135F3 /* AddStreakRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE0C19243A824D006135F3 /* AddStreakRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		85BF7847242D36DF00671253 /* StreaksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreaksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BF784B242D36DF00671253 /* StreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StreaksTests.swift; path = StreaksTests/StreaksTests.swift; sourceTree = SOURCE_ROOT; };
 		85BF784D242D36DF00671253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D011AE243BB4AD0009BA86 /* EditStreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStreak.swift; sourceTree = "<group>"; };
 		85EE0C19243A824D006135F3 /* AddStreakRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreakRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				85B2AF76243A76A500340DC8 /* StreakRow.swift */,
 				85EE0C19243A824D006135F3 /* AddStreakRow.swift */,
 				85A58DA5243A9C1F00417583 /* ShowStreak.swift */,
+				85D011AE243BB4AD0009BA86 /* EditStreak.swift */,
 				85BF783F242D36DF00671253 /* LaunchScreen.storyboard */,
 				85BF783A242D36DF00671253 /* Assets.xcassets */,
 			);
@@ -267,6 +270,7 @@
 				85BF7834242D36DA00671253 /* SceneDelegate.swift in Sources */,
 				85B2AF75243A757800340DC8 /* ViewModel.swift in Sources */,
 				858A63E5243A6624001BDA92 /* Streak.swift in Sources */,
+				85D011AF243BB4AD0009BA86 /* EditStreak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

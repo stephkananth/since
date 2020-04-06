@@ -22,7 +22,7 @@ class StreaksTests: XCTestCase {
   
   func testReset() {
     let name: String = "Test"
-    let streak: Streak = Streak(name: name)
+    let streak: Streak = Streak(name: name, date: Date())
     let date: Date = Date()
     streak.reset(date)
     XCTAssertEqual(streak.start, date)
@@ -30,7 +30,7 @@ class StreaksTests: XCTestCase {
   
   func testLength() {
     let name: String = "Test"
-    let streak: Streak = Streak(name: name)
+    let streak: Streak = Streak(name: name, date: Date())
     XCTAssertEqual(streak.length(), 0)
   }
 

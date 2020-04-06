@@ -20,11 +20,16 @@ struct ShowStreak: View {
       Spacer()
     }
     .navigationBarTitle(self.streak.name)
+    .navigationBarItems(trailing:
+      NavigationLink(destination: EditStreak(streak: self.streak)) {
+        Text("edit")
+      }
+    )
   }
 }
 
 struct ShowStreak_Previews: PreviewProvider {
   static var previews: some View {
-    ShowStreak(streak: Streak(name: "test"))
+    ShowStreak(streak: Streak(name: "test", date: Date()))
   }
 }

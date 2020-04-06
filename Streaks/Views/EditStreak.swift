@@ -1,16 +1,16 @@
 //
-//  AddStreakRow.swift
+//  EditStreak.swift
 //  Streaks
 //
-//  Created by Steph Ananth on 4/5/20.
+//  Created by Steph Ananth on 4/6/20.
 //  Copyright © 2020 Steph K. Ananth. All rights reserved.
 //
 
 import SwiftUI
 
-struct AddStreakRow: View {
+struct EditStreak: View {
 
-  var viewModel: ViewModel
+  var streak: Streak
 
   @State var name: String = ""
   @State var date: Date = Date()
@@ -20,8 +20,8 @@ struct AddStreakRow: View {
   var body: some View {
     VStack {
       HStack {
-        Text("name:").padding([.leading, .trailing])
-        TextField("name", text: self.$name).padding([.leading, .trailing])
+        Text("name: ").padding([.leading, .trailing])
+        TextField(self.streak.name, text: self.$name).padding([.leading, .trailing])
       }
       HStack {
         Text("date:").padding([.leading, .trailing])
@@ -30,11 +30,10 @@ struct AddStreakRow: View {
       DatePicker("start date:", selection: self.$date, displayedComponents: .date).labelsHidden()
       Spacer()
     }
-    .navigationBarTitle("new streak")
+    .navigationBarTitle("edit streak")
     .navigationBarItems(trailing:
       Button(action: {
-        let streak = Streak(name: self.name, date: self.date)
-        self.viewModel.saveStreak(streak: streak)
+        self.streak.update(name: self.name, date: self.date)
         self.mode.wrappedValue.dismiss()
       }) {
         Text("done")
@@ -43,8 +42,8 @@ struct AddStreakRow: View {
   }
 }
 
-struct AddStreakRow_Previews: PreviewProvider {
+struct EditStreak_Previews: PreviewProvider {
   static var previews: some View {
-    AddStreakRow(viewModel: ViewModel())
+    EditStreak(streak: Streak(name: "test", date: Date()))
   }
 }
